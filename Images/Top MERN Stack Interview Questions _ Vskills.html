@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://www.vskills.in/interview-questions/mern-stack-interview-questions-vskills -->
+<html dir="ltr" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:var(--litepicker-month-header-color)}.litepicker .container__months .month-item-header div{-webkit-box-flex:1;-ms-flex:1;flex:1}.litepicker .container__months .month-item-header div>.month-item-name{margin-right:5px}.litepicker .container__months .month-item-header div>.month-item-year{padding:0}.litepicker .container__months .month-item-header .reset-button{color:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button>svg{fill:var(--litepicker-button-reset-color)}.litepicker .container__months .month-item-header .reset-button *{pointer-events:none}.litepicker .container__months .month-item-header .reset-button:hover{color:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .reset-button:hover>svg{fill:var(--litepicker-button-reset-color-hover)}.litepicker .container__months .month-item-header .button-previous-month,.litepicker .container__months .month-item-header .button-next-month{visibility:hidden;text-decoration:none;padding:3px 5px;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__months .month-item-header .button-previous-month *,.litepicker .container__months .month-item-header .button-next-month *{pointer-events:none}.litepicker .container__months .month-item-header .button-previous-month{color:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month>svg,.litepicker .container__months .month-item-header .button-previous-month>img{fill:var(--litepicker-button-prev-month-color)}.litepicker .container__months .month-item-header .button-previous-month:hover{color:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-previous-month:hover>svg{fill:var(--litepicker-button-prev-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month{color:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month>svg,.litepicker .container__months .month-item-header .button-next-month>img{fill:var(--litepicker-button-next-month-color)}.litepicker .container__months .month-item-header .button-next-month:hover{color:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-header .button-next-month:hover>svg{fill:var(--litepicker-button-next-month-color-hover)}.litepicker .container__months .month-item-weekdays-row{display:-webkit-box;display:-ms-flexbox;display:flex;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;color:var(--litepicker-month-weekday-color)}.litepicker .container__months .month-item-weekdays-row>div{padding:5px 0;font-size:85%;-webkit-box-flex:1;-ms-flex:1;flex:1;width:var(--litepicker-day-width);text-align:center}.litepicker .container__months .month-item:first-child .button-previous-month{visibility:visible}.litepicker .container__months .month-item:last-child .button-next-month{visibility:visible}.litepicker .container__months .month-item.no-previous-month .button-previous-month{visibility:hidden}.litepicker .container__months .month-item.no-next-month .button-next-month{visibility:hidden}.litepicker .container__days{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;justify-self:center;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:center;-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__days>div,.litepicker .container__days>a{padding:5px 0;width:var(--litepicker-day-width)}.litepicker .container__days .day-item{color:var(--litepicker-day-color);text-align:center;text-decoration:none;border-radius:3px;-webkit-transition:color 0.3s, border 0.3s;transition:color 0.3s, border 0.3s;cursor:default}.litepicker .container__days .day-item:hover{color:var(--litepicker-day-color-hover);-webkit-box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover);box-shadow:inset 0 0 0 1px var(--litepicker-day-color-hover)}.litepicker .container__days .day-item.is-today{color:var(--litepicker-is-today-color)}.litepicker .container__days .day-item.is-locked{color:var(--litepicker-is-locked-color)}.litepicker .container__days .day-item.is-locked:hover{color:var(--litepicker-is-locked-color);-webkit-box-shadow:none;box-shadow:none;cursor:default}.litepicker .container__days .day-item.is-in-range{background-color:var(--litepicker-is-in-range-color);border-radius:0}.litepicker .container__days .day-item.is-start-date{color:var(--litepicker-is-start-color);background-color:var(--litepicker-is-start-color-bg);border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-flipped{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date{color:var(--litepicker-is-end-color);background-color:var(--litepicker-is-end-color-bg);border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-end-date.is-flipped{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:0;border-bottom-right-radius:0}.litepicker .container__days .day-item.is-start-date.is-end-date{border-top-left-radius:5px;border-bottom-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px}.litepicker .container__days .day-item.is-highlighted{color:var(--litepicker-highlighted-day-color);background-color:var(--litepicker-highlighted-day-color-bg)}.litepicker .container__days .week-number{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;color:var(--litepicker-month-week-number-color);font-size:85%}.litepicker .container__footer{text-align:right;padding:10px 5px;margin:0 5px;background-color:var(--litepicker-footer-color-bg);-webkit-box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);box-shadow:inset 0px 3px 3px 0px var(--litepicker-footer-box-shadow-color);border-bottom-left-radius:5px;border-bottom-right-radius:5px}.litepicker .container__footer .preview-date-range{margin-right:10px;font-size:90%}.litepicker .container__footer .button-cancel{background-color:var(--litepicker-button-cancel-color-bg);color:var(--litepicker-button-cancel-color);border:0;padding:3px 7px 4px;border-radius:3px}.litepicker .container__footer .button-cancel *{pointer-events:none}.litepicker .container__footer .button-apply{background-color:var(--litepicker-button-apply-color-bg);color:var(--litepicker-button-apply-color);border:0;padding:3px 7px 4px;border-radius:3px;margin-left:10px;margin-right:10px}.litepicker .container__footer .button-apply:disabled{opacity:0.7}.litepicker .container__footer .button-apply *{pointer-events:none}.litepicker .container__tooltip{position:absolute;margin-top:-4px;padding:4px 8px;border-radius:4px;background-color:var(--litepicker-tooltip-color-bg);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.25);box-shadow:0 1px 3px rgba(0,0,0,0.25);white-space:nowrap;font-size:11px;pointer-events:none;visibility:hidden}.litepicker .container__tooltip:before{position:absolute;bottom:-5px;left:calc(50% - 5px);border-top:5px solid rgba(0,0,0,0.12);border-right:5px solid transparent;border-left:5px solid transparent;content:""}.litepicker .container__tooltip:after{position:absolute;bottom:-4px;left:calc(50% - 4px);border-top:4px solid var(--litepicker-tooltip-color-bg);border-right:4px solid transparent;border-left:4px solid transparent;content:""}
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="alexaVerifyID" content="pznLu6td6nvef9iY4zVLkvff3cM">
+<meta name="alexaVerifyID" content="qva_Zm3erO7Yxor3F2-Z5rWnSxg">
+<meta name="msvalidate.01" content="1A69BCFCA120CF757D36E59EAA106653">
+<meta name="robots" content="index,follow">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta name="google-site-verification" content="zzRuVdv0E9HoFX0ALWiCHUIZuuE_aG7dEIReI0aB1Ag">
+<title>Top MERN Stack Interview Questions | Vskills</title>
+<!--<base href="https://www.vskills.in/interview-questions/">--><base href=".">
+<meta name="description" content="Top MERN Stack Interview Questions are listed here, do checkout them before your next interview. These can prepare you for a career in web and mobile app development using Angular 10.
+">
+<meta name="keywords" content="MERN Stack, MERN Stack Interview Questions, Top MERN Stack Interview Questions
+">
+<script type="text/javascript" async="" src="./Top MERN Stack Interview Questions _ Vskills_files/analytics.js.download"></script><script async="" charset="utf-8" src="./Top MERN Stack Interview Questions _ Vskills_files/saved_resource" type="text/javascript"></script><script type="text/javascript" async="" src="./Top MERN Stack Interview Questions _ Vskills_files/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-mz5PKseXoDoO0hDb9yl4mtNAEY/e5d3s3YQZnco+LGfqxVet0xzlfmHed9av6OIq"></script><script src="./Top MERN Stack Interview Questions _ Vskills_files/jquery-2.1.1.min.js.download" type="text/javascript"></script>
+<link href="./Top MERN Stack Interview Questions _ Vskills_files/bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="./Top MERN Stack Interview Questions _ Vskills_files/bootstrap.min.js.download" type="text/javascript"></script>
+<link href="./Top MERN Stack Interview Questions _ Vskills_files/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="./Top MERN Stack Interview Questions _ Vskills_files/stylesheet.css" rel="stylesheet">
+<script src="./Top MERN Stack Interview Questions _ Vskills_files/common.js.download" type="text/javascript"></script>
+<link href="https://www.vskills.in/interview-questions/mern-stack-interview-questions-vskills" rel="canonical">
+<link href="./Top MERN Stack Interview Questions _ Vskills_files/css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+//$(document).ready(function () {
+//     $("body").on("contextmenu",function(e){
+//         return false;
+//     });
+//     $("#id").on("contextmenu",function(e){
+//         return false;
+//     });
+//     document.onkeydown = function (e) {
+//       e = e || window.event;
+//       if (e.ctrlKey) {
+//         e.preventDefault();
+//         e.stopPropagation();
+//       }
+//     };
+// });
+</script>
+
+<script type="text/javascript" src="./Top MERN Stack Interview Questions _ Vskills_files/w"></script><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style></head>
+<body class=""><div class="zopim" __jx__id="___$_11 ___$_11" data-test-id="ChatWidgetButton" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px; background: transparent; overflow: hidden; position: fixed; z-index: 16000002; width: 203px; height: 30px; right: 10px; bottom: 0px;"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="./Top MERN Stack Interview Questions _ Vskills_files/saved_resource(1).html" data-test-id="ChatWidgetButton-iframe" title="Zendesk Chat widget button"></iframe></div><div class="zopim" __jx__id="___$_4 ___$_4" data-test-id="ChatWidgetWindow" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px; background: transparent; overflow: hidden; position: fixed; z-index: 16000001; right: 10px; bottom: 0px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 2px;"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="./Top MERN Stack Interview Questions _ Vskills_files/saved_resource(2).html" data-test-id="ChatWidgetWindow-iframe" title="Zendesk Chat widget window"></iframe></div>
+<script async="" src="./Top MERN Stack Interview Questions _ Vskills_files/js" type="text/javascript"></script>
+<script type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-20177733-1');
+</script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+  <a class="navbar-brand" href="https://www.vskills.in/interview-questions/index.php?route=common/home"><img src="./Top MERN Stack Interview Questions _ Vskills_files/toobar_logo.webp" title="Job Interview Questions" alt="Job Interview Questions"> <span>Job Interview Questions</span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item"><a class="nav-link" href="https://www.vskills.in/certification/">Vskills Certifications</a></li>
+    <li class="nav-item"><a class="nav-link" href="http://www.vskills.in/certification/why-vskills">Why Vskills</a></li>
+    </ul>
+    <div id="search" class="form-inline my-2 my-lg-0">
+      <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+    </div>
+  </div>
+</nav>
+
+<div style="height:80px;"></div>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4 offset-md-4"></div>
+</div>
+</div>
+<div id="question-category" class="container-fluid">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="https://www.vskills.in/interview-questions/index.php?route=common/home"><i class="fa fa-home"></i></a></li>
+        <li class="breadcrumb-item"><a href="https://www.vskills.in/interview-questions/mern-stack-interview-questions-vskills">MERN Stack</a></li>
+      </ol>
+</nav>
+  <div class="row">
+    <div id="content" class="col-sm-9">
+      <h2>MERN Stack</h2>
+            
+                <p></p><p>MERN stands for MongoDB, Express, React and Node.js. MERN stack is the popular framework for developing web and mobile applications. MongoDB provides database back-end while React is the client-side front-end web framework and express and node are the middleware in the MERN stack. The MERN stack enables fast development of applications which are easy to debug especially using the JSON documents.<br><br>Top questions on the MERN stack are provided to boost your skills and knowledge on the MERN stack but easily clear technical interview on the MERN stack.<br><br><br></p><p></p>
+              
+                                      <form id="form-4488" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4488">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.1</span>
+            How does React work          </div>
+            <div class="card-text">React creates a virtual DOM. When state changes in a component it firstly runs a "diffing" algorithm, which identifies what has changed in the virtual DOM. The second step is reconciliation, where it updates the DOM with the results of diff.</div>
+			<div class="text-right d-none"><a id="er4488" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4489" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4489">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.2</span>
+            What is props in React          </div>
+            <div class="card-text">Props are inputs to a React component. They are single values or objects containing a set of values that are passed to React Components on creation using a naming convention similar to HTML-tag attributes. i.e, They are data passed down from a parent component to a child component. The primary purpose of props in React is to provide following component functionality: Pass custom data to your React component, Trigger state changes and Use via this.props.reactProp inside component's render() method.</div>
+			<div class="text-right d-none"><a id="er4489" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4490" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4490">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.3</span>
+            What Is Replication In MongoDB          </div>
+            <div class="card-text">Replication is the process of synchronizing data across multiple servers. Replication provides redundancy and increases data availability. With multiple copies of data on different database servers, replication protects a database from the loss of a single server. Replication also allows you to recover from hardware failure and service interruptions.</div>
+			<div class="text-right d-none"><a id="er4490" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4491" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4491">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.4</span>
+            What are Higher-Order components          </div>
+            <div class="card-text">A higher-order component (HOC) is a function that takes a component and returns a new component. Basically, it’s a pattern that is derived from React’s compositional nature We call them as “pure’ components” because they can accept any dynamically provided child component but they won’t modify or copy any behavior from their input components.</div>
+			<div class="text-right d-none"><a id="er4491" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4492" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4492">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.5</span>
+            What do you mean by Asynchronous API          </div>
+            <div class="card-text">All APIs of Node.js library are aynchronous that is non-blocking. It essentially means a Node.js based server never waits for a API to return data. Server moves to next API after calling it and a notification mechanism of Events of Node.js helps server to get response from the previous API call.</div>
+			<div class="text-right d-none"><a id="er4492" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4493" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4493">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.6</span>
+            What is Callback Hell          </div>
+            <div class="card-text">The asynchronous function requires callbacks as a return parameter. When multiple asynchronous functions are chained together then callback hell situation comes up.</div>
+			<div class="text-right d-none"><a id="er4493" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4494" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4494">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.7</span>
+            What is Reconciliation          </div>
+            <div class="card-text">When a component’s props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with the previously rendered one. When they are not equal, React will update the DOM. This process is called reconciliation.</div>
+			<div class="text-right d-none"><a id="er4494" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4495" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4495">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.8</span>
+            Does Mongodb Support Foreign Key Constraints          </div>
+            <div class="card-text">No. MongoDB does not support such relationships. The database does not apply any constraints to the system (i.e.: foreign key constraints), so there are no "cascading deletes" or "cascading updates". Basically, in a NoSQL database it is up to you to decide how to organise the data and its relations if there are any.</div>
+			<div class="text-right d-none"><a id="er4495" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4496" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4496">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.9</span>
+            How Node prevents blocking code          </div>
+            <div class="card-text">By providing callback function. Callback function gets called whenever corresponding event triggered.</div>
+			<div class="text-right d-none"><a id="er4496" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4497" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4497">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.10</span>
+            How can you achieve transaction and locking in MongoDB          </div>
+            <div class="card-text">To achieve concepts of transaction and locking in MongoDB, we can use the nesting of documents, also called embedded (or sub) documents. MongoDB supports atomic operations within a single document.</div>
+			<div class="text-right d-none"><a id="er4497" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4498" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4498">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.11</span>
+            How does Node.js handle child threads          </div>
+            <div class="card-text">Node.js, in its essence, is a single thread process. It does not expose child threads and thread management methods to the developer. Technically, Node.js does spawn child threads for certain tasks such as asynchronous I/O, but these run behind the scenes and do not execute any application JavaScript code, nor block the main event loop. If threading support is desired in a Node.js application, there are tools available to enable it, such as the ChildProcess module.</div>
+			<div class="text-right d-none"><a id="er4498" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4499" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4499">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.12</span>
+            How to avoid Callback Hell in Node.js          </div>
+            <div class="card-text">Node.js internally uses a single-threaded event loop to process queued events. But this approach may lead to blocking the entire process if there is a task running longer than expected. Node.js addresses this problem by incorporating callbacks also known as higher-order functions. So whenever a long-running process finishes its execution, it triggers the callback associated. Sometimes, it could lead to complex and unreadable code. More the no. of callbacks, longer the chain of returning callbacks would be. There are four solutions which can address the callback hell problem: Make your program modular,  Use async/await mechanism, Use promises mechanism and Use generators </div>
+			<div class="text-right d-none"><a id="er4499" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4500" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4500">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.13</span>
+            If Node.js is single threaded then how it handles concurrency          </div>
+            <div class="card-text">Node provides a single thread to programmers so that code can be written easily and without bottleneck. Node internally uses multiple POSIX threads for various I/O operations such as File, DNS, Network calls etc. When Node gets I/O request it creates or uses a thread to perform that I/O operation and once the operation is done, it pushes the result to the event queue. On each such event, event loop runs and checks the queue and if the execution stack of Node is empty then it adds the queue result to execution stack.</div>
+			<div class="text-right d-none"><a id="er4500" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4501" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4501">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.14</span>
+            What are Pure Components          </div>
+            <div class="card-text">PureComponent is exactly the same as Component except that it handles the shouldComponentUpdate method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. Component, on the other hand, won’t compare current props and state to next out of the box. Thus, the component will re-render by default whenever shouldComponentUpdate is called.</div>
+			<div class="text-right d-none"><a id="er4501" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4502" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4502">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.15</span>
+            What are React Hooks          </div>
+            <div class="card-text">Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. With Hooks, you can extract stateful logic from a component so it can be tested independently and reused. Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community.</div>
+			<div class="text-right d-none"><a id="er4502" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4503" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4503">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.16</span>
+            What is Aggregation in MongoDB          </div>
+            <div class="card-text">Aggregations operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. MongoDB provides three ways to perform aggregation: the aggregation pipeline, the map-reduce function and single purpose aggregation methods and commands.</div>
+			<div class="text-right d-none"><a id="er4503" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4504" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4504">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.17</span>
+            What is JSX          </div>
+            <div class="card-text">JSX is a syntax extension to JavaScript and comes with the full power of JavaScript. JSX produces React elements. You can embed any JavaScript expression in JSX by wrapping it in curly braces. After compilation, JSX expressions become regular JavaScript objects. This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions:</div>
+			<div class="text-right d-none"><a id="er4504" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4505" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4505">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.18</span>
+            What is ReactDOM          </div>
+            <div class="card-text">It's a top-level React API to render a React element into the DOM, via the ReactDOM.render method.</div>
+			<div class="text-right d-none"><a id="er4505" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4506" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4506">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.19</span>
+            What is Sharding in MongoDB          </div>
+            <div class="card-text">Sharding is a method for storing data across multiple machines. MongoDB uses sharding to support deployments with very large data sets and high throughput operations.</div>
+			<div class="text-right d-none"><a id="er4506" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4507" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4507">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.20</span>
+            What is Stream and what are types of Streams available in Node.js          </div>
+            <div class="card-text">Streams are a collection of data that might not be available all at once and don’t have to fit in memory. Streams provide chunks of data in a continuous manner. It is useful to read a large set of data and process it. There is four fundamental type of streams:  Readable, Writeable, Duplex and Transform</div>
+			<div class="text-right d-none"><a id="er4507" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4508" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4508">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.21</span>
+            What is prop drilling          </div>
+            <div class="card-text">When building a React application, there is often the need for a deeply nested component to use data provided by another component that is much higher in the hierarchy. The simplest approach is to simply pass a prop from each component to the next in the hierarchy from the source component to the deeply nested component. This is called prop drilling.</div>
+			<div class="text-right d-none"><a id="er4508" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4509" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4509">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.22</span>
+            What is Key          </div>
+            <div class="card-text">A key is a special string attribute you need to include when creating lists of elements. Keys help React identify which items have changed, are added, or are removed.</div>
+			<div class="text-right d-none"><a id="er4509" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4510" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4510">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.23</span>
+            What is a Blocking Code          </div>
+            <div class="card-text">If application has to wait for some I/O operation in order to complete its execution any further then the code responsible for waiting is known as blocking code.</div>
+			<div class="text-right d-none"><a id="er4510" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4511" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4511">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.24</span>
+            What is the difference between ShadowDOM and VirtualDOM          </div>
+            <div class="card-text">Virtual DOM is about avoiding unnecessary changes to the DOM, which are expensive performance-wise, because changes to the DOM usually cause re-rendering of the page. Virtual DOM also allows to collect several changes to be applied at once, so not every single change causes a re-render, but instead re-rendering only happens once after a set of changes was applied to the DOM. Shadow DOM is mostly about encapsulation of the implementation. A single custom element can implement more-or-less complex logic combined with more-or-less complex DOM. An entire web application of arbitrary complexity can be added to a page by an import and <my-app></my-app> but also simpler reusable and composable components can be implemented as custom elements where the internal representation is hidden in the shadow DOM like <date-picker></date-picker>.</div>
+			<div class="text-right d-none"><a id="er4511" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4512" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4512">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.25</span>
+            What's the Event Loop          </div>
+            <div class="card-text">The event loop is what allows Node.js to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded — by offloading operations to the system kernel whenever possible. Every I/O requires a callback - once they are done they are pushed onto the event loop for execution. Since most modern kernels are multi-threaded, they can handle multiple operations executing in the background. When one of these operations completes, the kernel tells Node.js so that the appropriate callback may be added to the poll queue to eventually be executed.</div>
+			<div class="text-right d-none"><a id="er4512" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4513" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4513">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.26</span>
+            What's the difference between a "smart" component and a "dumb" component          </div>
+            <div class="card-text">Smart components manage their state or in a Redux environment are connected to the Redux store. Dumb components are driven completely by their props passed in from their parent and maintain no state of their own.</div>
+			<div class="text-right d-none"><a id="er4513" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4514" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4514">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.27</span>
+            What is Mongoose          </div>
+            <div class="card-text">Mongoose is an Object Document Mapper (ODM), which means that by using Mongoose, you can define objects with a strongly-typed schema that can be further mapped to a MongoDB document. It offers a schema-based solution for modeling application data. Mongoose comes with built-in typecasting, validation, query building, business logic hooks, and many more out-of-the-box features.</div>
+			<div class="text-right d-none"><a id="er4514" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4515" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4515">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.28</span>
+            What is REPL In Node.Js          </div>
+            <div class="card-text">REPL or “Read Eval Print Loop” is a simple program that can accept commands, evaluate them, and prints the results. What REPL does is to create an environment that is similar to a Unix/Linux shell or a Window console, wherein you can enter command and system, and it will respond with the output. Here are the functions that REPL performs: READ (This reads the input provided by the user, parses it into JavaScript data structure, and stores it in the memory.), EVAL (This executes the data structure), PRINT (This prints the outcome generated after evaluating the command.) and LOOP (This loops the above command until the user presses Ctrl+C twice.)</div>
+			<div class="text-right d-none"><a id="er4515" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4516" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4516">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.29</span>
+            How to check if an object is an array or not in JavaScript          </div>
+            <div class="card-text">The best way to find whether an object is instance of a particular class or not using toString method from Object.prototype</div>
+			<div class="text-right d-none"><a id="er4516" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4517" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4517">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.30</span>
+            List down the two arguments that async.queue takes as input in Node.js          </div>
+            <div class="card-text">Task Function and Concurrency Value</div>
+			<div class="text-right d-none"><a id="er4517" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4518" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4518">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.31</span>
+            What is the purpose of module.exports in Node.js          </div>
+            <div class="card-text">This is used to expose functions of a particular module or file to be used elsewhere in the project. This can be used to encapsulate all similar functions in a file which further improves the project structure.</div>
+			<div class="text-right d-none"><a id="er4518" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4519" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4519">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.32</span>
+            What is node.js streams          </div>
+            <div class="card-text">Streams are instances of EventEmitter which can be used to work with streaming data in Node.js. They can be used for handling and manipulating streaming large files(videos, mp3, etc) over the network. They use buffers as their temporary storage.</div>
+			<div class="text-right d-none"><a id="er4519" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4520" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4520">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.33</span>
+            What are node.js buffers          </div>
+            <div class="card-text">In general, buffers is a temporary memory that is mainly used by stream to hold on to some data until consumed. Buffers are introduced with additional use cases than JavaScript’s Unit8Array and are mainly used to represent a fixed-length sequence of bytes. This also supports legacy encodings like ASCII, utf-8, etc. It is a fixed(non-resizable) allocated memory outside the v8.</div>
+			<div class="text-right d-none"><a id="er4520" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4521" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4521">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.34</span>
+            Explain the concept of stub in Node.js          </div>
+            <div class="card-text">Stubs are used in writing tests which are an important part of development. It replaces the whole function which is getting tested.  </div>
+			<div class="text-right d-none"><a id="er4521" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4522" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4522">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.35</span>
+            What is a thread pool and which library handles it in Node.js          </div>
+            <div class="card-text">The Thread pool is handled by the libuv library. libuv is a multi-platform C library that provides support for asynchronous I/O-based operations such as file systems, networking, and concurrency. </div>
+			<div class="text-right d-none"><a id="er4522" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4523" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4523">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.36</span>
+            How to make node modules available externally          </div>
+            <div class="card-text">module.export</div>
+			<div class="text-right d-none"><a id="er4523" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4524" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4524">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.37</span>
+            What is the default scope of Node.js application          </div>
+            <div class="card-text">Local</div>
+			<div class="text-right d-none"><a id="er4524" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4525" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4525">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.38</span>
+            Which module is used to serve static files in Node.js          </div>
+            <div class="card-text">node-static</div>
+			<div class="text-right d-none"><a id="er4525" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4526" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4526">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.39</span>
+            What is a Document in MongoDB          </div>
+            <div class="card-text">A Document in MongoDB is an ordered set of keys with associated values. It is represented by a map, hash, or dictionary. </div>
+			<div class="text-right d-none"><a id="er4526" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4527" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4527">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.40</span>
+            What is the Mongo Shell          </div>
+            <div class="card-text">It is a JavaScript shell that allows interaction with a MongoDB instance from the command line. With that one can perform administrative functions, inspecting an instance, or exploring MongoDB. </div>
+			<div class="text-right d-none"><a id="er4527" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4528" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4528">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.41</span>
+            How do you Delete a Document in MongoDB           </div>
+            <div class="card-text">The CRUD API in MongoDB provides deleteOne and deleteMany for this purpose. Both of these methods take a filter document as their first parameter. The filter specifies a set of criteria to match against in removing documents.</div>
+			<div class="text-right d-none"><a id="er4528" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4529" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4529">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.42</span>
+            Explain the process of Sharding.          </div>
+            <div class="card-text">Sharding is the process of splitting data up across machines. We also use the term “partitioning” sometimes to describe this concept. We can store more data and handle more load without requiring larger or more powerful machines, by putting a subset of data on each machine.</div>
+			<div class="text-right d-none"><a id="er4529" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4530" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4530">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.43</span>
+            What is a Replica Set in MongoDB          </div>
+            <div class="card-text">To keep identical copies of your data on multiple servers, we use replication. It is recommended for all production deployments. Use replication to keep your application running and your data safe, even if something happens to one or more of your servers. Such replication can be created by a replica set with MongoDB. A replica set is a group of servers with one primary, the server taking writes, and multiple secondaries, servers that keep copies of the primary’s data. If the primary crashes, the secondaries can elect a new primary from amongst themselves.</div>
+			<div class="text-right d-none"><a id="er4530" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4531" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4531">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.44</span>
+            What is Scaffolding in Express.js          </div>
+            <div class="card-text">Scaffolding is creating the skeleton structure of application. There are 2 way to do this:     Express application generator and Yeoman</div>
+			<div class="text-right d-none"><a id="er4531" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4532" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4532">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.45</span>
+            What is routing and how routing works in Express.js          </div>
+            <div class="card-text">Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URI (or path) and a specific HTTP request method (GET, POST, and so on). Each route can have one or more handler functions, which are executed when the route is matched.</div>
+			<div class="text-right d-none"><a id="er4532" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4533" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4533">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.46</span>
+            What is Middleware in Express.js          </div>
+            <div class="card-text">Middleware is a function that is invoked by the Express routing layer before the final request handler.</div>
+			<div class="text-right d-none"><a id="er4533" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4534" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4534">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.47</span>
+            What Function Arguments Are Available To Express.js Route Handlers          </div>
+            <div class="card-text">The arguments available to an Express.js route handler function are: req (the request object), res (the response object) and next (optional, a function to pass control to one of the subsequent route handlers)</div>
+			<div class="text-right d-none"><a id="er4534" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4535" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4535">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.48</span>
+            How Can I Authenticate Users in Express          </div>
+            <div class="card-text">Authentication is another opinionated area that Express does not venture into. You may use any authentication scheme you wish. </div>
+			<div class="text-right d-none"><a id="er4535" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4536" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4536">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.49</span>
+            Which Template Engines Does Express Support          </div>
+            <div class="card-text">Express supports any template engine that conforms with the (path, locals, callback) signature.</div>
+			<div class="text-right d-none"><a id="er4536" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+              <form id="form-4537" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="question_id" value="4537">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <div class="card-text q bold clearfix pb-2"><span class="pull-left pr-2">Q.50</span>
+            How Do I Render Plain Html in Express           </div>
+            <div class="card-text">There’s no need to “render” HTML with the res.render() function. If you have a specific file, use the res.sendFile() function. If you are serving many assets from a directory, use the express.static() middleware function.</div>
+			<div class="text-right d-none"><a id="er4537" href="javascript:;" class="txt-small card-link"><i class="fa fa-exclamation-triangle"></i> Report This Question</a></div>
+                </div>
+        </div>
+        </form>
+                              </div>
+
+        <div class="col-sm-3">
+      <div class="sidebar">
+        <div class="widgets">
+          <div class="widget contact-form">
+    <div class="widget-title">Get industry recognized certification</div>
+    <div class="content">
+      <form id="form-callback">
+      <div id="callback_error"></div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="form-group"><input type="hidden" name="currenturl" value="https://www.vskills.in/interview-questions/mern-stack-interview-questions-vskills"><input type="text" name="name" class="form-control" placeholder="Name"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group"><input type="text" name="email" class="form-control" placeholder="Email"></div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group"><input type="text" name="phone" class="form-control" placeholder="Phone"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group message">
+              <textarea name="message" class="form-control" placeholder="Message" rows="1"></textarea>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 captcha">
+              <script src="./Top MERN Stack Interview Questions _ Vskills_files/api.js.download" type="text/javascript"></script>
+<fieldset>
+  <div class="form-group required">    <div class="col-sm-10">
+      <div class="g-recaptcha" data-sitekey="6LdpmR4UAAAAAOqOYo7rWLa9fQ8KRepZyhgQwpFl"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="./Top MERN Stack Interview Questions _ Vskills_files/anchor.html" width="304" height="78" role="presentation" name="a-oy2mt1oaq5gw" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="./Top MERN Stack Interview Questions _ Vskills_files/saved_resource(3).html"></iframe></div>
+      </div>
+    </div>
+</fieldset>
+
+        </div>
+      </div>
+      <button style="margin-top:5px;" id="button-callback" type="button" class="btn btn-block btn-primary">Submit</button>
+    </form>
+    </div>
+  </div>
+
+          <div class="widget cert-widget"><h3>Get Govt. Certified</h3>
+            <p></p> <a href="https://www.vskills.in/certification/mern-stack-developer-online-certfication" target="_blank" class="btn btn-primary">Know More</a></div>
+          <div class="widget sidebar-entry ad-box blue hidden-xs"><h4>Are you an expert ?</h4><a target="_blank" href="https://www.vskills.in/practice">Take a Quiz</a></div>
+        </div>
+      </div>
+    </div>
+        </div>
+</div>
+
+<div class="sticky-btns">
+<div class="btn-group" role="group" aria-label="">
+  <a class="btn btn-secondary" href="https://www.vskills.in/certification/mern-stack-developer-online-certfication">Get Govt. Certified</a>
+  <a class="btn btn-secondary" href="https://www.vskills.in/practice">Take Test</a>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="reportquestion" tabindex="-1" role="dialog" aria-labelledby="reportquestionTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reportquestionTitle">Report This Question</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+        	<div class="form-group">
+        		<label class="control-label">Name</label>
+        		<input type="text" name="name" class="form-control">
+        		<input type="hidden" name="question_id">
+        	</div>
+        	<div class="form-group">
+        		<label class="control-label">Email</label>
+        		<input type="email" name="email" class="form-control">
+        	</div>
+        	<div class="form-group">
+        		<label class="control-label">Message</label>
+        		<textarea name="message" class="form-control"></textarea>
+        	</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer> <div class="container"> <div class="row"> <div class="col-sm-6">©2008 - 2019 by Vskills.in All Rights Reserved.</div> <div class="col-sm-6 text-right"> <div id="social"> <a href="https://www.facebook.com/vskills.in" target="_blank"><i class="fa fa-facebook"></i></a> <a href="https://twitter.com/vskills_in" target="_blank"><i class="fa fa-twitter"></i></a> <a href="https://plus.google.com/+VskillsNewDelhi" target="_blank"><i class="fa fa-google-plus"></i></a> <a href="https://www.linkedin.com/company/vskills" target="_blank"><i class="fa fa-linkedin"></i></a> </div> </div> </div> </div> </footer> <!--Start of Zopim Live Chat Script-->
+<script async="" type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="//v2.zopim.com/?3yJEz0Tj4SI7sjlOrfbNfEXlb495Oeth";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zopim Live Chat Script-->
+<div id="h10-xray"></div><div id="h10-xray-keywords"></div><div id="h10-asin-grabber"></div><div id="h10-demand"></div><div id="h10-inventory"></div><div id="h10-profitability-calculator"></div><div id="h10-review"></div><div id="h10-xray-walmart"></div><div id="h10-token-connection"></div><div id="h10-page-widget"></div><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" src="./Top MERN Stack Interview Questions _ Vskills_files/bframe.html" name="c-oy2mt1oaq5gw" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body></html>
